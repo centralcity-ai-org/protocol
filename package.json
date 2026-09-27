@@ -1,0 +1,18 @@
+{
+  "name": "@centralcity/protocol",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Central City protocol: specifications, JSON Schemas (draft 2020-12) and conformance fixtures.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node scripts/validate-conformance.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  }
+}
