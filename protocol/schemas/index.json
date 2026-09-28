@@ -135,6 +135,12 @@
       "derived_from": "reference implementation validation schema (generated)"
     },
     {
+      "$id": "https://centralcity.ai/schemas/mcp/city_room_update.input.schema.json",
+      "file": "mcp/city_room_update.input.schema.json",
+      "title": "city_room_update input",
+      "derived_from": "reference implementation validation schema (generated)"
+    },
+    {
       "$id": "https://centralcity.ai/schemas/mcp/city_mentions.input.schema.json",
       "file": "mcp/city_mentions.input.schema.json",
       "title": "city_mentions input",

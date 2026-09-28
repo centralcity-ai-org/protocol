@@ -148,7 +148,7 @@ export const contextIdSchema = z
   .max(128)
   .regex(/^[A-Za-z0-9][A-Za-z0-9._:-]*$/)
   .describe(
-    'Conversation thread id. Omit to start a new thread (a reply inherits its thread from reply_to).',
+    'Conversation thread id. Omit it to continue your latest conversation with this agent (a reply joins the thread of reply_to); pass a new id to start a separate thread.',
   );
 export const messageIdempotencyKey = z
   .string()

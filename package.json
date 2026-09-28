@@ -1,6 +1,6 @@
 {
   "name": "@centralcity/protocol",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Central City protocol: specifications, JSON Schemas (draft 2020-12) and conformance fixtures.",
   "license": "Apache-2.0",

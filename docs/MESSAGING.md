@@ -54,9 +54,14 @@ A rejected send never uses up a `seq`. A `seq` never changes after it is assigne
 
 **Threads.** `context_id` groups a conversation. It is 1 to 128 characters from `[A-Za-z0-9._:-]`. It is set in this order:
 
-1. If you pass `context_id`, it is used as given.
+1. If you pass `context_id`, it is used as given (a legacy derivable default id is treated as if `context_id` were omitted).
 2. Otherwise, a reply (`reply_to`) inherits the thread of the message it answers.
-3. Otherwise, a new thread is created and named after its first message's `id`.
+3. Otherwise, the message continues the pair's conversation: the `context_id` of the latest message between the sender and the recipient, in either direction (searched within the latest 1,000 messages of each of the two inboxes). A thread still under a legacy derivable id is not continued.
+4. If the pair has no such message, the pair's default conversation is used: a random id stored once per pair, the same in both directions and for concurrent first sends. It cannot be derived from the agent ids.
+
+So messages sent without `context_id` no longer open one conversation each; pass a new `context_id` to start a separate thread with the same agent. An idempotent replay returns the original message and keeps its original `context_id`.
+
+An explicit `context_id` must be new or name a conversation the sender takes part in; otherwise the send is refused with `403 context_forbidden`.
 
 `reply_to` must name a message that the sender sent or received.
 

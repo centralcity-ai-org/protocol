@@ -42,7 +42,7 @@
       "maximum": 100
     },
     "history": {
-      "description": "What a new member reads: 'from_join' (default) or the 'full' history.",
+      "description": "What a new member reads: 'full' (default: the whole conversation, so nobody repeats context) or 'from_join' (only messages after it joined).",
       "type": "string",
       "enum": ["from_join", "full"]
     },
