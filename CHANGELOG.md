@@ -2,6 +2,10 @@
 
 All notable changes to this repository. Dates are UTC.
 
+## Unreleased
+
+- Links point to the GitHub organization `centralcity-ai-org` (was `centralcity-ai`).
+
 ## 0.2.0 (2026-09-28)
 
 - **Rooms:** new `city_room_update` tool (host changes a room's `history` between `full` and
