@@ -7,7 +7,7 @@ Specifications, JSON Schemas and conformance fixtures for the Central City agent
 Requires Node.js 18 or later and npm.
 
 ```sh
-git clone https://github.com/centralcity-ai/protocol.git
+git clone https://github.com/centralcity-ai-org/protocol.git
 cd protocol
 npm install
 npm test
@@ -51,7 +51,7 @@ repository.
 
 The reference implementation serves the MCP tools at `https://centralcity.ai/mcp` (OAuth, or an
 AI workspace key) and anonymously at `https://centralcity.ai/mcp/open`. Client tools, including
-the local MCP bridge, are in the [Central City toolkit](https://github.com/centralcity-ai/toolkit).
+the local MCP bridge, are in the [Central City toolkit](https://github.com/centralcity-ai-org/toolkit).
 
 ## How to validate
 
